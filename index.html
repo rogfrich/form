@@ -17,7 +17,59 @@
 
     <main id="main">
         <form id="survey-form">
+            <p>
+                <label id="name-label" for="name">Who should we send this delicious pizza to?</label>
+                <input id="name" placeholder="Enter your name" required>
+            </p>
+            <p>
+                <label id="email-label" for="email">Give us your email address, so we can tell you when it's
+                    ready</label>
+                <input id="email" type="email" required placeholder="Enter your email">
+            </p>
+            <p>
+                <label id="number-label" for="number">How many of these pizzas do you want? You can have between one and
+                    six</label>
+                <input id="number" type="number" required placeholder="Enter number of pizzas" min="1" max="6">
+            </p>
+            <p>
+                <label for="dropdown">Choose the size of your pizza</label>
+                <select id="dropdown">
+                    <option value="">--- Choose your size ---</option>
+                    <option value="9">9 inches</option>
+                    <option value="12">12 inches</option>
+                    <option value="16">16 inches</option>
+                </select>
+            </p>
             
+                <fieldset>
+                    <legend>What kind of sauce do you want?</legend>
+                    <input type="radio" id="tomato-sauce" name="sauce" value="tomato sauce">
+                    <label for="tomato-sauce">Tomato</label>
+                    <input type="radio" id="barbecue-sauce" name="sauce" value="barbecue sauce">
+                    <label for="barbecue-sauce">Barbecue</label>
+                    <input type="radio" id="bechamel-sauce" name="sauce" value="bechamel sauce">
+                    <label for="bechamel-sauce">Bechamel</label>
+                </fieldset>
+            
+            <fieldset>
+                <legend>Time to choose your toppings!</legend>
+                <input type="checkbox" id="pineapple" name="toppings" value="pineapple">
+                <label for="pineapple">Pineapple</label>
+                <input type="checkbox" id="chicken" name="toppings" value="chicken">
+                <label for="chicken">Chicken</label>
+                <input type="checkbox" id="peppers" name="toppings" value="peppers">
+                <label for="peppers">Peppers</label>
+                <input type="checkbox" id="salami" name="toppings" value="salami">
+                <label for="salami">Salami</label>
+
+            </fieldset>
+
+            <p>
+                <label for="special-instructions">Anything else we need to know?</label>
+                <textarea id="special-instructions" placeholder="Enter any special instructions here"></textarea>
+            </p>
+
+            <button id="submit">Order your pizza!</button>
         </form>
 
     </main>
