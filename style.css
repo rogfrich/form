@@ -1,0 +1,22 @@
+#title {
+    text-align: center;
+}
+
+.below-input {
+    display: block;
+    width: 80%;
+    margin-top: 5px;
+}
+
+#dropdown {
+    width: 80%;
+}
+
+fieldset {
+    margin-top: 30px;
+    padding: 10px
+}
+
+#special-instructions {
+    height: 80px;
+}

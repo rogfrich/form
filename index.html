@@ -17,23 +17,24 @@
 
     <main id="main">
         <form id="survey-form">
-            <p>
-                <label id="name-label" for="name">Who should we send this delicious pizza to?</label>
-                <input id="name" placeholder="Enter your name" required>
+            <h2>About you</h2>
+            <p class="form-group">
+                <label id="name-label" for="name">What's your name?</label>
+                <input id="name" placeholder="Enter your name" required class="below-input">
             </p>
-            <p>
-                <label id="email-label" for="email">Give us your email address, so we can tell you when it's
-                    ready</label>
-                <input id="email" type="email" required placeholder="Enter your email">
+            <p class="form-group">
+                <label id="email-label" for="email">What's your email address?</label>
+                <input id="email" type="email" required placeholder="Enter your email address" class="below-input">
             </p>
-            <p>
-                <label id="number-label" for="number">How many of these pizzas do you want? You can have between one and
-                    six</label>
-                <input id="number" type="number" required placeholder="Enter number of pizzas" min="1" max="6">
+            <h2>Your order</h2>
+            <p class="form-group">
+                <label id="number-label" for="number">How many pizzas? (Order between 1 and 6)</label>
+                <input id="number" type="number" required placeholder="Enter number of pizzas" min="1" max="6"
+                    class="below-input">
             </p>
-            <p>
+            <p class="form-group">
                 <label for="dropdown">Choose the size of your pizza</label>
-                <select id="dropdown">
+                <select id="dropdown" class="below-input">
                     <option value="">--- Choose your size ---</option>
                     <option value="9">9 inches</option>
                     <option value="12">12 inches</option>
@@ -41,32 +42,54 @@
                 </select>
             </p>
 
-            <fieldset>
-                <legend>What kind of sauce do you want?</legend>
-                <input type="radio" id="tomato-sauce" name="sauce" value="tomato sauce">
-                <label for="tomato-sauce">Tomato</label>
-                <input type="radio" id="barbecue-sauce" name="sauce" value="barbecue sauce">
-                <label for="barbecue-sauce">Barbecue</label>
-                <input type="radio" id="bechamel-sauce" name="sauce" value="bechamel sauce">
-                <label for="bechamel-sauce">Bechamel</label>
-            </fieldset>
+            <div class="fieldset">
+                <fieldset id="sauce-options">
+                    <legend>What kind of sauce do you want?</legend>
+                    <div class=grouped-inputs>
+                        <input type="radio" id="tomato-sauce" name="sauce" value="tomato sauce">
+                        <label for="tomato-sauce">Tomato</label>
+                        <input type="radio" id="barbecue-sauce" name="sauce" value="barbecue sauce">
+                        <label for="barbecue-sauce">Barbecue</label>
+                        <input type="radio" id="bechamel-sauce" name="sauce" value="bechamel sauce">
+                        <label for="bechamel-sauce">Bechamel</label>
+                    </div>
+                </fieldset>
+            </div>
 
-            <fieldset>
-                <legend>Time to choose your toppings!</legend>
-                <input type="checkbox" id="pineapple" name="toppings" value="pineapple">
-                <label for="pineapple">Pineapple</label>
-                <input type="checkbox" id="chicken" name="toppings" value="chicken">
-                <label for="chicken">Chicken</label>
-                <input type="checkbox" id="peppers" name="toppings" value="peppers">
-                <label for="peppers">Peppers</label>
-                <input type="checkbox" id="salami" name="toppings" value="salami">
-                <label for="salami">Salami</label>
+            <div class="fieldset">
+                <fieldset id="toppings">
+                    <legend>Time to choose your toppings!</legend>
+                    <div class="grouped-inputs">
+                        <input type="checkbox" id="pineapple" name="toppings" value="pineapple">
+                        <label for="pineapple">Pineapple</label>
+                        <input type="checkbox" id="chicken" name="toppings" value="chicken">
+                        <label for="chicken">Chicken</label>
+                        <input type="checkbox" id="peppers" name="toppings" value="peppers">
+                        <label for="peppers">Peppers</label>
+                        <input type="checkbox" id="salami" name="toppings" value="salami">
+                        <label for="salami">Salami</label>
 
-            </fieldset>
+                        <input type="checkbox" id="broccoli" name="toppings" value="broccoli">
+                        <label for="broccoli">Broccoli</label>
+                        <input type="checkbox" id="bacon" name="toppings" value="bacon">
+                        <label for="salami">Bacon</label>
+                        <input type="checkbox" id="olives" name="toppings" value="olives">
+                        <label for="salami">Olives</label>
+                        <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+                        <label for="salami">Mushrooms</label>
+                        <input type="checkbox" id="extra-cheese" name="toppings" value="extra cheese">
+                        <label for="extra-cheese">Extra cheese</label>
+                        <input type="checkbox" id="asparagus" name="toppings" value="asparagus">
+                        <label for="asparagus">Asparagus</label>
+                    </div>
 
+                </fieldset>
+            </div>
+            <h2>Special Instructions</h2>
             <p>
                 <label for="special-instructions">Anything else we need to know?</label>
-                <textarea id="special-instructions" placeholder="Enter any special instructions here"></textarea>
+                <textarea id="special-instructions" placeholder="Enter any special instructions here"
+                    class="below-input"></textarea>
             </p>
 
             <button id="submit">Order your pizza!</button>
