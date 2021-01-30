@@ -40,6 +40,11 @@ section {
     height: 3em;
 }
 
+/* 
+header styling for background image copied from here:
+https://www.digitalocean.com/community/tutorials/how-to-change-a-css-background-images-opacity
+*/
+
 header {
     position: relative;
     overflow: hidden;
