@@ -17,6 +17,25 @@ fieldset {
     padding: 10px
 }
 
-#special-instructions {
+.special-instructions textarea {
     height: 80px;
+}
+
+section {
+    background-color: lightgray;
+    border: 1px black solid;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+.submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.submit-button button {
+    width: 15em;
+    height: 3em;
 }

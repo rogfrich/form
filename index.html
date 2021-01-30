@@ -8,7 +8,7 @@
 
 <body>
     <header>
-        <h1 id="title">Design your own pizza!</h1>
+        <h1 id="title">Choose your pizza!</h1>
         <p id="description">
             Welcome to the Pretend Pizza Company&trade; online order form. Please make your choices below.
         </p>
@@ -17,82 +17,89 @@
 
     <main id="main">
         <form id="survey-form">
-            <h2>About you</h2>
-            <p class="form-group">
-                <label id="name-label" for="name">What's your name?</label>
-                <input id="name" placeholder="Enter your name" required class="below-input">
-            </p>
-            <p class="form-group">
-                <label id="email-label" for="email">What's your email address?</label>
-                <input id="email" type="email" required placeholder="Enter your email address" class="below-input">
-            </p>
-            <h2>Your order</h2>
-            <p class="form-group">
-                <label id="number-label" for="number">How many pizzas? (Order between 1 and 6)</label>
-                <input id="number" type="number" required placeholder="Enter number of pizzas" min="1" max="6"
-                    class="below-input">
-            </p>
-            <p class="form-group">
-                <label for="dropdown">Choose the size of your pizza</label>
-                <select id="dropdown" class="below-input">
-                    <option value="">--- Choose your size ---</option>
-                    <option value="9">9 inches</option>
-                    <option value="12">12 inches</option>
-                    <option value="16">16 inches</option>
-                </select>
-            </p>
+            <section class="customer-info">
+                <h2>About you</h2>
+                <p class="form-group">
+                    <label id="name-label" for="name">What's your name?</label>
+                    <input id="name" placeholder="Enter your name" required class="below-input">
+                </p>
+                <p class="form-group">
+                    <label id="email-label" for="email">What's your email address?</label>
+                    <input id="email" type="email" required placeholder="Enter your email address" class="below-input">
+                </p>
+            </section>
 
-            <div class="fieldset">
-                <fieldset id="sauce-options">
-                    <legend>What kind of sauce do you want?</legend>
-                    <div class=grouped-inputs>
-                        <input type="radio" id="tomato-sauce" name="sauce" value="tomato sauce">
-                        <label for="tomato-sauce">Tomato</label>
-                        <input type="radio" id="barbecue-sauce" name="sauce" value="barbecue sauce">
-                        <label for="barbecue-sauce">Barbecue</label>
-                        <input type="radio" id="bechamel-sauce" name="sauce" value="bechamel sauce">
-                        <label for="bechamel-sauce">Bechamel</label>
-                    </div>
-                </fieldset>
-            </div>
+            <section class="order-info">
+                <h2>Your order</h2>
 
-            <div class="fieldset">
-                <fieldset id="toppings">
-                    <legend>Time to choose your toppings!</legend>
-                    <div class="grouped-inputs">
-                        <input type="checkbox" id="pineapple" name="toppings" value="pineapple">
-                        <label for="pineapple">Pineapple</label>
-                        <input type="checkbox" id="chicken" name="toppings" value="chicken">
-                        <label for="chicken">Chicken</label>
-                        <input type="checkbox" id="peppers" name="toppings" value="peppers">
-                        <label for="peppers">Peppers</label>
-                        <input type="checkbox" id="salami" name="toppings" value="salami">
-                        <label for="salami">Salami</label>
 
-                        <input type="checkbox" id="broccoli" name="toppings" value="broccoli">
-                        <label for="broccoli">Broccoli</label>
-                        <input type="checkbox" id="bacon" name="toppings" value="bacon">
-                        <label for="salami">Bacon</label>
-                        <input type="checkbox" id="olives" name="toppings" value="olives">
-                        <label for="salami">Olives</label>
-                        <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
-                        <label for="salami">Mushrooms</label>
-                        <input type="checkbox" id="extra-cheese" name="toppings" value="extra cheese">
+                <p class="form-group">
+                    <label for="dropdown">Choose the size of your pizza</label>
+                    <select id="dropdown" class="below-input" required>
+                        <option value="">--- Choose your size ---</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                        <option value="xlarge">Extra Large</option>
+                    </select>
+                </p>
+
+                <p class="form-group">
+                    <label for="pizza">What kind of pizza do you want?</label>
+                    <select id="pizza" class="below-input" required>
+                        <option value="">--- Choose your pizza ---</option>
+                        <option value="hawaiian">Hawaiian</option>
+                        <option value="pepperoni">Pepperoni</option>
+                        <option value="meatfeast">Meat Feast</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                    </select>
+                </p>
+
+                <div class="fieldset">
+                    <fieldset class="cheese-options">
+                        <legend>Choose your cheese!</legend>
+                        <input type="radio" id="no-cheese" name="sauce" value="no-cheese">
+                        <label for="no-cheese">No cheese</label>
+                        <input type="radio" id="standard-cheese" name="sauce" value="standard-cheese" checked>
+                        <label for="standard-cheese">Standard cheese</label>
+                        <input type="radio" id="extra-cheese" name="sauce" value="extra-cheese">
                         <label for="extra-cheese">Extra cheese</label>
-                        <input type="checkbox" id="asparagus" name="toppings" value="asparagus">
-                        <label for="asparagus">Asparagus</label>
-                    </div>
+                    </fieldset>
 
-                </fieldset>
+                </div>
+
+                <div class="choose-oil">
+                    <fieldset>
+                        <legend>Choose your condiments</legend>
+                        <input type="checkbox" name="condiments" value="chilli-oil" id="chilli-oil">
+                        <label for="chilli-oil">Chilli oil</label>
+                        <input type="checkbox" name="condiments" value="garlic-oil" id="garlic-oil">
+                        <label for="garlic-oil">Garlic oil</label>
+                        <input type="checkbox" name="condiments" value="mayo" id="mayo">
+                        <label for="mayo">Mayo</label>
+                    </fieldset>
+                </div>
+
+                <p class="form-group">
+                    <label id="number-label" for="number">How many slices should we cut your pizza into? Use 0 for no
+                        slicing. Max is 8 slices.</label>
+                    <input id="number" type="number" required placeholder="Number of slices" min="0" max="8"
+                        class="below-input">
+                </p>
+            </section>
+            <section class="special-instructions">
+
+                <h2>Special Instructions</h2>
+                <p>
+                    <label for="special-instructions">Anything else we need to know?</label>
+                    <textarea id="special-instructions" placeholder="Enter any special instructions here"
+                        class="below-input"></textarea>
+                </p>
+            </section>
+            <div class="submit-button">
+                <button id="submit">Order your pizza!</button>
             </div>
-            <h2>Special Instructions</h2>
-            <p>
-                <label for="special-instructions">Anything else we need to know?</label>
-                <textarea id="special-instructions" placeholder="Enter any special instructions here"
-                    class="below-input"></textarea>
-            </p>
-
-            <button id="submit">Order your pizza!</button>
         </form>
 
     </main>
