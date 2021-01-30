@@ -39,3 +39,31 @@ section {
     width: 15em;
     height: 3em;
 }
+
+header {
+    position: relative;
+    overflow: hidden;
+    padding: 0px;
+}
+
+header h1 {
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+header p {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+header img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.4;
+}
