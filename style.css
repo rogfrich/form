@@ -1,5 +1,12 @@
-#title {
-    text-align: center;
+body {
+    background-color: lightyellow;
+}
+
+@media (min-width: 1000px) {
+    body {
+        max-width: 60%;
+        margin: auto;
+    }
 }
 
 .below-input {
@@ -14,7 +21,8 @@
 
 fieldset {
     margin-top: 30px;
-    padding: 10px
+    padding: 10px;
+    width: 80%;
 }
 
 .special-instructions textarea {
@@ -22,10 +30,10 @@ fieldset {
 }
 
 section {
-    background-color: lightgray;
     border: 1px black solid;
     margin-top: 30px;
     padding: 15px;
+    background: linear-gradient(0deg, grey, lightgray);
 }
 
 .submit-button {
@@ -33,42 +41,56 @@ section {
     justify-content: center;
     align-items: center;
     height: 100px;
+    color: blue;
 }
 
 .submit-button button {
     width: 15em;
     height: 3em;
+    background-color: blue;
+    color: white;
+    font-size: 1.2em;
 }
 
-/* 
-header styling for background image copied from here:
-https://www.digitalocean.com/community/tutorials/how-to-change-a-css-background-images-opacity
-*/
+.submit-button button:hover {
+    background-color: green;
+    transform: scale(1.2);
+}
 
 header {
-    position: relative;
-    overflow: hidden;
-    padding: 0px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: larger;
+    margin: 0px;
+    background-image: url("assets/pizza-955px.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
 }
 
 header h1 {
-    text-align: center;
-    padding: 10px;
+    text-align: start;
     position: relative;
-    z-index: 1;
+    top: 75px;
+    background-color: darkblue;
+    width: 50%;
+    margin: auto;
+    /* background-color: black; */
+    color: white;
+    border: 1px solid black;
+    padding: 20px;
 }
 
-header p {
+.hero-text {
+    width: 30%;
     text-align: center;
-    position: relative;
-    z-index: 1;
+    padding: 5px;
+    background-color: blue;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    border: 1px solid black;
+    font-size: 2em;
 }
 
-header img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
-    opacity: 0.4;
+.form-group {
+    font-family: 'Lato', sans-serif;
 }

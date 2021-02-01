@@ -4,21 +4,29 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <title>Order Your Pizza</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <h1>Choose your pizza!</h1>
-        <p id="description">
-            Welcome to the Pretend Pizza Company&trade; online order form. Please make your choices below.
-        </p>
-        <img src="assets/pizza-955px.jpg">
+        <p class="hero-text">Choose</p>
+        <p class="hero-text">Your</p>
+        <p class="hero-text">Pizza</p>
+
     </header>
 
 
     <main id="main">
         <form id="survey-form">
+            <p id="description">
+                Welcome to the Pretend Pizza Company&trade; online order form. Please make your choices below.
+            </p>
             <section class="customer-info">
+
                 <h2>About you</h2>
                 <p class="form-group">
                     <label id="name-label" for="name">What's your name?</label>
@@ -73,6 +81,8 @@
                 <div class="choose-oil">
                     <fieldset>
                         <legend>Choose your condiments</legend>
+                        <input type="checkbox" name="condiments" value="none" id-"none" checked>
+                        <label for="none">None</label>
                         <input type="checkbox" name="condiments" value="chilli-oil" id="chilli-oil">
                         <label for="chilli-oil">Chilli oil</label>
                         <input type="checkbox" name="condiments" value="garlic-oil" id="garlic-oil">
@@ -83,9 +93,9 @@
                 </div>
 
                 <p class="form-group">
-                    <label id="number-label" for="number">How many slices should we cut your pizza into? Use 0 for no
+                    <label id="number-label" for="number">How many slices should we cut your pizza into? Use 1 for no
                         slicing. Max is 8 slices.</label>
-                    <input id="number" type="number" required placeholder="Number of slices" min="0" max="8"
+                    <input id="number" type="number" required placeholder="Number of slices" min="1" max="8"
                         class="below-input">
                 </p>
             </section>
