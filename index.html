@@ -45,7 +45,7 @@
             <h2>Your order</h2>
 
             <!-- Pizza size-->
-            <select id="dropdown" class="form-select form-select-sm mb-4" required>
+            <select id="dropdown" title="Select Pizza Size" class="form-select form-select-sm mb-4" required>
                 <option value="">--- Choose your size ---</option>
                 <option value="small">Small</option>
                 <option value="medium">Medium</option>
@@ -54,7 +54,7 @@
             </select>
 
             <!-- Type of pizza -->
-            <select id="pizza" class="form-select form-select-sm mb-4" required>
+            <select id="pizza" title="Select type of pizza" class="form-select form-select-sm mb-4" required>
                 <option value="">--- Choose your pizza ---</option>
                 <option value="hawaiian">Hawaiian</option>
                 <option value="pepperoni">Pepperoni</option>
@@ -107,14 +107,15 @@
                 <label class="form-label" id="number-label" for="number">How many slices should we cut your pizza
                     into?</label>
                 <input class="form-control" id="number" type="number" required placeholder="Enter number of slices"
-                    min="1" max="8" class="below-input">
+                    min="1" max="8">
                 <div class="form-text">Max 8 slices. Use 1 if you want it unsliced.</div>
             </div>
 
             <!-- Special instructions -->
             <h2>Special Instructions</h2>
             <div class="mb-4">
-                <textarea placeholder="Enter any special instructions here" class="form-control"></textarea>
+                <textarea title="Enter special instructions" placeholder="Enter any special instructions here"
+                    class="form-control"></textarea>
             </div>
 
             <!-- Submit button -->
